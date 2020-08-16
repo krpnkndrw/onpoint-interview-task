@@ -1,0 +1,70 @@
+#SecondPage{
+    color: #fff;
+    position: relative;
+}
+
+#SecondPage h2{ 
+    font-size: 50px;
+    font-family: "Gotham Pro Light";
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 1s;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 0px 0px 62px rgba(0,131,254,0.7);
+}
+
+.activeParallax{
+    transition-timing-function: ease;
+}
+
+#SecondPage h2.activeParallax{
+    top: 40%;
+}
+.ice{
+    position: absolute;
+    transition: 1s;
+}
+#SecondPage .ice:nth-of-type(1){
+    transform: rotate(-35deg) translate(-50%, -50%);
+    width: 50px;    
+    top: 270px;
+    left: 120px;
+}
+#SecondPage .ice:nth-of-type(1).activeParallax{
+    top: 170px;
+}
+
+#SecondPage .ice:nth-of-type(2){
+    transform: rotate(-40deg) translate(-50%, -50%);
+    width: 200px;
+    top: 175px;
+    right: -190px;
+    filter: blur(3px);
+}
+#SecondPage .ice:nth-of-type(2).activeParallax{
+    top: 75px;
+}
+
+#SecondPage .ice:nth-of-type(3){
+    transform: rotate(-00deg) translate(-50%, -50%);
+    width: 100px;
+    top: 620px;
+    left: 280px;
+}
+#SecondPage .ice:nth-of-type(3).activeParallax{
+    top: 520px;
+}
+
+#SecondPage .ice:nth-of-type(4){
+    transform: rotate(-80deg) translate(-50%, -50%);
+    width: 50px;
+    top: 500px;
+    left: 750px;
+    filter: blur(5px);
+}
+#SecondPage .ice:nth-of-type(4).activeParallax{
+    top: 600px;
+}

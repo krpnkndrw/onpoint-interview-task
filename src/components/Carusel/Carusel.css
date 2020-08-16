@@ -1,0 +1,98 @@
+.carusel{
+    width: 300%;
+    position: absolute;
+    transition: all 1s ease 0s;
+}
+.caruselPage{
+    color: #fff;
+    position: relative;
+}
+.caruselPage h3{
+    font-size: 30px;
+    font-family: "Gotham Pro Light";
+    font-weight: 500;
+    margin-left: 85px;
+    margin-top: 115px;
+}
+.caruselPage>img{
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    display: block; 
+    margin: auto;
+}
+.tab_1{    
+    width: 552px;  
+    margin-top: 80px !important;
+}
+.tab_2{
+    width: 752px;
+}
+.tab_3{
+    width: 910px;
+}
+.caruselPage img.ice{
+    opacity: 0.5;
+}
+.caruselPage:nth-of-type(1)>div.iceContainer>img:nth-of-type(1) {
+    top: 115px;
+    right: 50px;
+    width: 35px;    
+    transform: rotate(-60deg);
+}
+.caruselPage:nth-of-type(1)>div.iceContainer>img:nth-of-type(2)  {
+    top: 150px;
+    right: 150px;
+    top: 230px;
+    right: 290px;
+    width: 110px;
+    transform: rotate(30deg);
+}
+.caruselPage:nth-of-type(1)>div.iceContainer>img:nth-of-type(3)  {
+    bottom: 12px;
+    left: 10px;
+    width: 200px;
+    transform: rotate(-39deg);
+    filter: blur(3px);
+}
+
+.caruselPage:nth-of-type(2)>div.iceContainer>img:nth-of-type(1) {
+    top: 100px;
+    right: 540px;
+    width: 35px;    
+    transform: rotate(-60deg);
+}
+.caruselPage:nth-of-type(2)>div.iceContainer>img:nth-of-type(2)  {
+    top: 220px;
+    left: 20px;
+    width: 110px;
+    transform: rotate(30deg);
+}
+.caruselPage:nth-of-type(2)>div.iceContainer>img:nth-of-type(3)  {
+    bottom: 10px;
+    right: 40px;
+    width: 200px;
+    transform: rotate(-39deg);
+    filter: blur(3px);
+}
+
+.caruselPage:nth-of-type(3)>div.iceContainer>img:nth-of-type(1) {
+    top: 115px;
+    left: 10px;
+    width: 35px;    
+    transform: rotate(-60deg);
+}
+.caruselPage:nth-of-type(3)>div.iceContainer>img:nth-of-type(2)  {
+    top: 230px;
+    right: 10px;
+    width: 110px;
+    transform: rotate(30deg);
+}
+.caruselPage:nth-of-type(3)>div.iceContainer>img:nth-of-type(3)  {
+    bottom: -20px;
+    left: 150px;
+    width: 200px;
+    transform: rotate(-70deg);
+    filter: blur(3px);
+}

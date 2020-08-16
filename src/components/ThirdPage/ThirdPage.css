@@ -1,0 +1,17 @@
+#ThirdPage{
+    position: relative;
+}
+#carusel{
+    width: 300%;
+}
+.caruselPage{
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+}
+.slider{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, 0);
+}

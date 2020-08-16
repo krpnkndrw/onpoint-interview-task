@@ -1,0 +1,57 @@
+#FirstPage{
+    /*background-image: url('./more copy.png');
+    background-size: cover;
+    background-position-y: bottom;*/
+    position: relative;
+}
+#FirstPage h1{ 
+    font-size: 50px;
+    font-family: "Gotham Pro Light";
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    font-weight: 700;
+    width: 800px;
+    color: #0d319c;
+}
+#FirstPage .pulse:nth-of-type(1){
+    top: 265px;
+    left: 562px;
+}
+#FirstPage .pulse:nth-of-type(2){
+    width: 28px;
+    top: 418px;
+    left: 274px;
+}
+#FirstPage .pulse:nth-of-type(3){
+    width: 17px;
+    top: 521px;
+    left: 480px;
+}
+#FirstPage .pulse:nth-of-type(4){
+    width: 17px;
+    top: 502px;
+    left: 820px;
+}
+#FirstPage p {
+    font-size: 20px;
+    font-family: 'LatoRegular', sans-serif;
+    color: #0d319c;
+    position: absolute;
+}
+#FirstPage p:nth-of-type(1){
+    top: 277px;
+    left: 623px;
+}
+#FirstPage p:nth-of-type(2){
+    top: 396px;
+    left: 226px;
+}
+#FirstPage p:nth-of-type(3){
+    top: 505px;
+    left: 375px;
+}
+#FirstPage p:nth-of-type(4){
+    top: 487px;
+    left: 791px;
+}

@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "MyriadProRegular";
+  src:  url("./fonts/MyriadProRegular/MyriadProRegular.eot");
+  src:  url("./fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+        url("./fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+        url("./fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src:  local('./fonts/GothamPro-Light/Gotham Pro Light'), 
+        url('./fonts/GothamPro-Light/GothamPro-Light.woff2') format('woff2'),
+        url('./fonts/GothamPro-Light/GothamPro-Light.woff') format('woff'),
+        url('./fonts/GothamPro-Light/GothamPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatoRegular";
+  src:  url("./fonts/LatoRegular/LatoRegular.eot");
+  src:  url("./fonts/LatoRegular/LatoRegular.eot?#iefix")format("embedded-opentype"),
+        url("./fonts/LatoRegular/LatoRegular.woff") format("woff"),
+        url("./fonts/LatoRegular/LatoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Gotham Pro Light", sans-serif;
+}
+#App{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+}
+#pagesContainer{
+  position: relative;
+  transition: 1s;
+  background-image: url('./img/more-copy.png');
+  background-size: cover;
+}
+.page{
+  height: 100vh;
+  width: 100%;
+}

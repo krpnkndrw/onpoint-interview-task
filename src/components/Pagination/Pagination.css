@@ -1,0 +1,20 @@
+#Pagination{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+}
+.dot{
+    height: 13px;
+    width: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: 1s;
+}
+.dot:not(:last-of-type){
+    margin-bottom: 8px;
+}
+.activeDot{
+    background-color: #f78b1f;
+}

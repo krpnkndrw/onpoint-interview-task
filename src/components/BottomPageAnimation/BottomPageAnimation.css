@@ -1,0 +1,46 @@
+.bottomPageAnimation{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-align: center;
+    transition:1s;
+}
+.bottomPageAnimation p {
+    font-size: 15px;
+}
+.arrow {
+    width: 44px;
+    margin-top: 15px;
+}
+.hideBottomPageAnimation{
+    opacity: 0;
+    transition: 0.2s;
+}
+.shine{
+    position: absolute;
+    bottom: 0px;
+    left: 46%;
+    transform: translateX(-50%);
+    width: 995px;
+    height: 0%;
+    transition:0.2s;
+}
+.shine.hide{
+    transition:0s;
+    height: 0%;
+}
+.shine2.hide{
+    transition:0s;
+    height: 0%;
+}
+.shine2{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 478px; 
+    height: 0%;
+    transition:0.2s;
+}

@@ -1,0 +1,48 @@
+.Sourse{
+    position: absolute;
+    left: 0;
+    top: 0;        
+}
+.Sourse.hide{
+    visibility: hidden;
+}
+.SourseBackground{
+    background-color: #000;
+    opacity: 0.3;
+    height: 100%;
+    transition:0.3s;
+    animation: sourseShow 1s ease;
+}
+.SourseBackground.hide{
+    opacity: 0;
+}
+.SourseContent {
+    height: 162px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.3s
+}
+.SourseContent.hide {
+    bottom: -190px;
+}
+.SourseContent img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.SourseContent ol{    
+    width: 840px;    
+    position: relative;
+    z-index: 2;
+    /*list-style: none;*/
+}
+.SourseContent li{
+    font-size: 15px;
+    font-family: 'MyriadProRegular';
+    color: #232323;
+}
