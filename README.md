@@ -1,2 +1,4 @@
-# onpoint-interview-task
-Тестовое задание на собеседование Onpoint - https://sergeyguns.github.io/onpoint-task/
+# onpoint-interview-task 
+Тестовое задание на собеседование Onpoint - https://sergeyguns.github.io/onpoint-task/ 
+
+NPM - npm run start
