@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Arrow from '../../img/Arrow.png'
 import shine from '../../img/shine.png'
 import shine2 from '../../img/shine2.png'
@@ -7,18 +7,18 @@ import './BottomPageAnimation.css';
 const BottomPageAnimation = (props) => {
     const [activePageMem, setActivePageMem] = useState(0)
     const [activeBottomPageAnimation, setActiveBottomPageAnimation] = useState(true)
-    const countRef = useRef(false);
 
+    let timerID
     useEffect( () => {
         if(props.activePage !== activePageMem){
             setActiveBottomPageAnimation(false)
-            countRef.current = setTimeout( () => {
+            timerID = setTimeout( () => {
                 setActiveBottomPageAnimation(true)
             }, 2000)
             setActivePageMem(props.activePage)
         }
         return () => {
-            clearInterval(countRef.current)
+            clearInterval(timerID)
           }
     }, [props.activePage])
 
