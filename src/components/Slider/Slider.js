@@ -1,9 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Slider.css';
 
 const Slider = (props) => {
-    const thumbRef = useRef(null)
-    const sliderRef = useRef(null)
 
     const sliderWidth = 640
     const thumbWidth = 43
@@ -13,8 +11,9 @@ const Slider = (props) => {
     const [returning, setReturnign] = useState(false)
 
     const touchStartHandler = (event) => {
+        if(event.target.classList[0] !== 'thumb') return
         if(!returning){
-            setDeltaX(event.changedTouches[0].pageX - thumbRef.current.getBoundingClientRect().x)
+            setDeltaX(event.changedTouches[0].pageX - event.target.getBoundingClientRect().x)            
         }
     }    
     
@@ -22,21 +21,24 @@ const Slider = (props) => {
     let rigthEnd = sliderWidth + leftEnd
     let sectionLength = (sliderWidth)/3
 
-    const touchMoveHandler = (event) => {
-            let sliderX = sliderRef.current.getBoundingClientRect().x
-            let nextThumbPosition = event.changedTouches[0].pageX - sliderX - deltaX  
+    const touchMoveHandler = (event) => {         
+        let sliderX = event.currentTarget.getBoundingClientRect().x
 
-            if (nextThumbPosition >= leftEnd && nextThumbPosition <= rigthEnd){
-                setThumbPosition(nextThumbPosition)
+        if(event.target.classList[0] !== 'thumb') return
 
-                if( nextThumbPosition <=sectionLength){
-                    props.setActiveSection(1)
-                } else if(nextThumbPosition >sectionLength && nextThumbPosition <= sectionLength*2){
-                    props.setActiveSection(2)
-                } else {
-                    props.setActiveSection(3)
-                }
-            }  
+        let nextThumbPosition = event.changedTouches[0].pageX - sliderX - deltaX 
+
+        if (nextThumbPosition >= leftEnd && nextThumbPosition <= rigthEnd){
+            setThumbPosition(nextThumbPosition)
+
+            if( nextThumbPosition <= sectionLength){
+                 props.setActiveSection(1)
+            } else if(nextThumbPosition > sectionLength && nextThumbPosition <= sectionLength*2){
+                props.setActiveSection(2)
+            } else {
+                props.setActiveSection(3)
+            }
+        }  
     }
 
     const touchEndHandler = () => {
@@ -59,16 +61,15 @@ const Slider = (props) => {
         <div className='slider'>
             <div 
                 className='sliderBody' 
-                ref={sliderRef}
                 style = {{ width: `${sliderWidth}px` }}
+                onTouchStart={touchStartHandler}
+                onTouchMove = {touchMoveHandler}
                 >
                 <div 
                     className={`thumb ${returning ? 'returning' : ''}`}
-                    ref={thumbRef}
                     style={{left: `${thumbPosition}px`, width: `${thumbWidth}px`}}   
-                    onTouchStart={touchStartHandler}
-                    onTouchEnd ={touchEndHandler}                 
-                    onTouchMove = {touchMoveHandler}
+                    onTouchEnd ={touchEndHandler}                
+                    
                 >                        
                 </div>
                 <div 
